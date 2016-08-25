@@ -108,8 +108,5 @@ nbactions.xml
 .idea/
 .mvn/
 apiweb2.iml
-gitignore
 mvnw
 mvnw.cmd
-pom.xml
-src/
