@@ -1,6 +1,9 @@
-# API Web 2.0
+# _API Web 2.0_
 
 Projeto idealizado com a função de apresentar uma api rest utilizando SpringBoot e AngularJS.
+
+## Instalação:
+    Rode o projeto a partir da classe ApiWeb2Application.
 
 ## Requisitos:
     1. JDK 1.8
