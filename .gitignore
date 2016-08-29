@@ -106,6 +106,9 @@ nbactions.xml
 .nb-gradle/
 
 .idea/
+.mvn
+mvnw
+mvnw.cmd
 
 apiweb2.iml
 target
