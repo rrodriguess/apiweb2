@@ -5,7 +5,7 @@ var appCliente = angular.module("appCliente", []);
 appCliente.controller("indexController", function($scope, $http) {
 
     $scope.clientes = [];
-    $scope.cliente={};
+    $scope.cliente={}; //Binding com o form
 
     $scope.carregarClientes = function() {
         $http({method:'GET', url:'http://localhost:8081/clientes'})
@@ -16,7 +16,7 @@ appCliente.controller("indexController", function($scope, $http) {
                 console.log(response.data);
                 console.log(response.status);
         });
-    }
+    };
 
     $scope.salvarCliente = function() {
         $http({method:'POST', url:'http://localhost:8081/clientes', data:$scope.cliente})
@@ -27,7 +27,7 @@ appCliente.controller("indexController", function($scope, $http) {
                 console.log(response.data);
                 console.log(response.status);
         });
-    }
+    };
 
     $scope.excluirCliente = function(cliente) {
         $http({method:'DELETE', url:'http://localhost:8081/clientes/'+cliente.id})
@@ -40,7 +40,15 @@ appCliente.controller("indexController", function($scope, $http) {
                 console.log(response.data);
                 console.log(response.status);
         });
-    }
+    };
+
+    $scope.alterarCliente = function(cli) {
+        $scope.cliente = angular.copy(cli);
+    };
+
+    $scope.cancelarAlteracaoCliente = function() {
+        $scope.cliente={};
+    };
 
     $scope.carregarClientes();
 
