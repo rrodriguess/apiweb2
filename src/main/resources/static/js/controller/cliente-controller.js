@@ -1,4 +1,4 @@
-appCliente.controller("indexController", function($scope, $http) {
+appCliente.controller("clienteController", function($scope, $http) {
 
     $scope.clientes = [];
     $scope.cliente={}; //Binding com o form
